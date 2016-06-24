@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome #{firstName}
+  form(name="login", action="/logout", method="post")
+      input(type='submit',value='Logout',data-transition='fade', data-theme='c')

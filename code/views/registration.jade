@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome!
+  div.registrationbox
+    p #{errorMessage}
+    form(name="registerUser", action="/registerUser", method="post")
+      div(data-role='fieldcontain')
+        label(for='fname') FirstName
+           input(id='fname',type='text',value='',placeholder='FirstName',name='fname')
+      div(data-role='fieldcontain')
+        label(for='lname') LastName
+           input(id='lname',type='text',value='',placeholder='LastName',name='lname')
+      div(data-role='fieldcontain')
+        label(for='address') address
+           input(id='address',type='text',value='',placeholder='address',name='address')
+      div(data-role='fieldcontain')
+        label(for='city') City
+           input(id='city',type='text',value='',placeholder='city',name='city')
+      div(data-role='fieldcontain')
+        label(for='state') State
+           input(id='state',type='text',value='',placeholder='state',name='state')
+      div(data-role='fieldcontain')
+        label(for='zip') Zip
+           input(id='zip',type='text',value='',placeholder='zip',name='zip')
+      div(data-role='fieldcontain')
+        label(for='email') Email
+           input(id='email',type='text',value='',placeholder='email',name='email')
+      div(data-role='fieldcontain')
+        label(for='username') username
+           input(id='username',type='text',value='',placeholder='username',name='username')
+      div#passworddiv(data-role='fieldcontain')
+        label(for='password') password
+           input(id='password',type='password',value='',placeholder='',name='password')
+      div(data-role='fieldcontain')   
+      input(type='submit',value='Register',data-transition='fade', data-theme='c')
